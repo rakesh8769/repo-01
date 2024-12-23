@@ -1,0 +1,14 @@
+on:
+    push:
+      branches:
+        - '*'
+        
+  
+    
+  
+jobs:
+    date_print:
+      runs-on: ubuntu-latest
+      steps:
+        - name: "print hello"
+          run: date
