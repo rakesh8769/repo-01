@@ -1,0 +1,14 @@
+on:
+    push:
+      branches:
+        - master
+        - production
+  
+    
+  
+jobs:
+    hello_print:
+      runs-on: ubuntu-latest
+      steps:
+        - name: "print hello"
+          run: echo "how you doing today"
