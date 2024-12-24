@@ -3,12 +3,24 @@ on:
       branches:
         - '*'
         
+    pull_request:
+      branches:
+       - master       
   
     
   
 jobs:
-    date_print:
+    date_print_push:
+      if: github.event_name == 'push'  
       runs-on: ubuntu-latest
       steps:
         - name: "print hello"
           run: date
+
+
+    print_uptime: 
+        if: github.event_name == 'pull_request'
+        runs-on: ubuntu-latest
+        steps:
+         - name: check uptime
+           run: uptime      
