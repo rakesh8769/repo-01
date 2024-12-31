@@ -6,7 +6,8 @@ on:
     pull_request:
       branches:
        - master       
-  
+    
+    workflow_dispatch:   
     
   
 jobs:
@@ -24,3 +25,12 @@ jobs:
         steps:
          - name: check uptime
            run: uptime      
+
+
+    dispat_task:
+       
+      if : github.event_name == 'orkflow_dispatch'
+      runs-on: ubuntu-latest
+      steps:
+        - name: dispatch
+          run: "how you doing, this is manual dispatch"
