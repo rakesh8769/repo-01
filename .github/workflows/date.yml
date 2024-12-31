@@ -5,7 +5,9 @@ on:
         
     pull_request:
       branches:
-       - master       
+       - master  
+    
+    workflow_dispatch:   
   
     
   
