@@ -33,4 +33,4 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: dispatch
-          run: "how you doing, this is manual dispatch"
+          run: echo "hello world"
